@@ -1,6 +1,6 @@
 # RgnTX
 
-## Install
+## 1. Install
 To install this package via devtools, please use the following codes.
 ```
 if (!requireNamespace("devtools", quietly = TRUE))
@@ -18,3 +18,13 @@ BiocManager::install("RgnTX")
 ```
 
 To view the documentation of RgnTX, please type `browseVignettes("RgnTX")` after installation.
+
+## 2. Basic functions
+```
+library(RgnTX)
+library(TxDb.Hsapiens.UCSC.hg19.knownGene)
+txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene 
+
+trans.ids <- c("170", "782", "974", "1364", "1387")
+randomResults <- randomizeTx(txdb, trans_ids = trans.ids, random_num = 10, type = "mature", random_length = 100)
+```
