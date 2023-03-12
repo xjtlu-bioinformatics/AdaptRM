@@ -26,6 +26,7 @@ To view the documentation of RgnTX, please type `browseVignettes("RgnTX")` after
 shiftExonTx(exons.tx.B, start.B, distance)
 ```
 
+```
 | **INPUT:** input;  
 | **OUTPUT:** result;  
 | 
@@ -36,7 +37,7 @@ shiftExonTx(exons.tx.B, start.B, distance)
 |   do something whith input;  
 |   **FOR EACH** $a_i$ **in** B   
 |     do something with $a_i$;
-
+```
 
 ### - randomizeTx
 ```
