@@ -26,6 +26,18 @@ To view the documentation of RgnTX, please type `browseVignettes("RgnTX")` after
 shiftExonTx(exons.tx.B, start.B, distance)
 ```
 
+| **INPUT:** input;  
+| **OUTPUT:** result;  
+| 
+| **IF** this_is_True:  
+|   do_this;  
+| **ELSE**
+|   select B from input;  
+|   do something whith input;  
+|   **FOR EACH** $a_i$ **in** B   
+|     do something with $a_i$;
+
+
 ### - randomizeTx
 ```
 trans.ids <- c("170", "782", "974", "1364", "1387")
