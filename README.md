@@ -20,6 +20,11 @@ BiocManager::install("RgnTX")
 To view the documentation of RgnTX, please type `browseVignettes("RgnTX")` after installation.
 
 ## 2. Basic functions
+
+```
+shiftExonTx(exons.tx.B, start.B, distance)
+```
+
 ```
 trans.ids <- c("170", "782", "974", "1364", "1387")
 randomResults <- randomizeTx(txdb = TxDb.Hsapiens.UCSC.hg19.knownGene, 
@@ -28,3 +33,5 @@ randomResults <- randomizeTx(txdb = TxDb.Hsapiens.UCSC.hg19.knownGene,
                              type = "mature", 
                              random_length = 100)
 ```
+
+
