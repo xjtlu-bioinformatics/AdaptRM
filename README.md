@@ -21,10 +21,12 @@ To view the documentation of RgnTX, please type `browseVignettes("RgnTX")` after
 
 ## 2. Basic functions
 
+### 2.1 shiftExonTx
 ```
 shiftExonTx(exons.tx.B, start.B, distance)
 ```
 
+### 2.2 randomizeTx
 ```
 trans.ids <- c("170", "782", "974", "1364", "1387")
 randomResults <- randomizeTx(txdb = TxDb.Hsapiens.UCSC.hg19.knownGene, 
