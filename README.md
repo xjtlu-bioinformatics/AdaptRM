@@ -95,6 +95,7 @@ permTestTx_results <- permTestTx(RS1 = A,
 ```
 ## 4. Shifted z-scores
 
+### - shiftedZScoreTx
 ```
 file <- system.file(package="RgnTX", "extdata", "m6A_sites_data.rds")
 m6A_sites_data <- readRDS(file)
@@ -115,6 +116,10 @@ p1 <- plotShiftedZScoreTx(shiftedZScoreTx_results)
 
 ## 5. Multiple hypothesis tests with Benjamini-Hochberg correction
 
+### - adjustMultipleTesting
 ```
+file <- system.file(package="RgnTX", "extdata/multi_pvals.rds")
+multi_pvals <- readRDS(file)
+adjustMultipleTesting(multi_pvals, 0.05)
 ```
 
