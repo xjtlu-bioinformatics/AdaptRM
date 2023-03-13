@@ -108,21 +108,22 @@ permTestTx_results <- permTestTx(RS1 = A,
 
 ### - shiftedZScoreTx
 ```R
+txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
 file <- system.file(package="RgnTX", "extdata", "m6A_sites_data.rds")
 m6A_sites_data <- readRDS(file)
-RS1 <- m6A_sites_data[1:500]
+RS1 <- m6A_sites_data[1:100]
 txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
-
 permTestTx_results <- permTestTxIA_customPick(RS1 = RS1,
-                                          txdb = txdb,
-                                          type = "mature",
-                                          customPick_function = getStopCodon,
-                                          ntimes = 50)
-shiftedZScoreTx_results <- shiftedZScoreTx(permTestTx_results, txdb = txdb,
-                                           window = 2000, 
-                                           step = 200,
+                                              txdb = txdb,
+                                              type = "mature",
+                                              customPick_function = getStopCodon,
+                                              ntimes = 1)
+shitedZScoresTx_results <- shiftedZScoreTx(permTestTx_results,txdb,
+                                           type = 'mature',
+                                           window = 500,
+                                           step = 50,
                                            ev_function_1 = overlapCountsTxIA)
-p1 <- plotShiftedZScoreTx(shiftedZScoreTx_results)
+
 ```
 
 ## 5. Multiple hypothesis tests with Benjamini-Hochberg correction
