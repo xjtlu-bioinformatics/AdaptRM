@@ -107,7 +107,7 @@ permTestTx_results <- permTestTx(RS1 = A,
 
 ### - plotPermResults
 
-## 4. Shifted z-scores
+## 4. Shifted z-scores over transcripts
 
 ### - shiftedZScoreTx
 ```R
