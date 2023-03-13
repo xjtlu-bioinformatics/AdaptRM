@@ -10,7 +10,7 @@ devtools::install_github("yue-wang-biomath/RgnTX", build_vignettes = TRUE)
 ```
 
 To install this package via BiocManager, please use the following codes.
-```
+```R
 if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
@@ -22,7 +22,7 @@ To view the documentation of RgnTX, please type `browseVignettes("RgnTX")` after
 ## 2. Basic functions
 
 ### - shiftExonTx
-```
+```R
 shiftExonTx(exons.tx.B, start.B, distance)
 ```
 
@@ -40,7 +40,7 @@ shiftExonTx(exons.tx.B, start.B, distance)
 ```
 
 ### - randomizeTx
-```
+```R
 trans.ids <- c("170", "782", "974", "1364", "1387")
 randomResults <- randomizeTx(txdb = TxDb.Hsapiens.UCSC.hg19.knownGene, 
                              trans_ids = trans.ids, 
@@ -53,7 +53,7 @@ randomResults <- randomizeTx(txdb = TxDb.Hsapiens.UCSC.hg19.knownGene,
 ### - permTestTx
 
 ### - permTestTx_customPick
-```
+```R
 txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
 getCDS = function(trans_ids, txdb,...){
   cds.tx0 <- cdsBy(txdb, use.names=FALSE)
@@ -73,7 +73,7 @@ p1 <- plotPermResults(permTestTx_results, binwidth = 1)
 ```
 
 ### - permTestTxIA_customPick
-```
+```R
 txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
 file <- system.file(package="RgnTX", "extdata", "m6A_sites_data.rds")
 m6A_sites_data <- readRDS(file)
@@ -89,7 +89,7 @@ p_a <- plotPermResults(permTestTx_results, binwidth = 1)
 ```
 
 ### - permTestTx
-```
+```R
 txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
 exons.tx0 <- exonsBy(txdb)
 trans.ids <- sample(names(exons.tx0), 50)
@@ -109,7 +109,7 @@ permTestTx_results <- permTestTx(RS1 = A,
 ## 4. Shifted z-scores
 
 ### - shiftedZScoreTx
-```
+```R
 file <- system.file(package="RgnTX", "extdata", "m6A_sites_data.rds")
 m6A_sites_data <- readRDS(file)
 RS1 <- m6A_sites_data[1:500]
@@ -130,7 +130,7 @@ p1 <- plotShiftedZScoreTx(shiftedZScoreTx_results)
 ## 5. Multiple hypothesis tests with Benjamini-Hochberg correction
 
 ### - adjustMultipleTesting
-```
+```R
 file <- system.file(package="RgnTX", "extdata/multi_pvals.rds")
 multi_pvals <- readRDS(file)
 adjustMultipleTesting(multi_pvals, 0.05)
