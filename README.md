@@ -26,7 +26,7 @@ To view the documentation of RgnTX, please type `browseVignettes("RgnTX")` after
 shiftExonTx(exons.tx.B, start.B, distance)
 ```
 
-```bash
+```latex
 | **INPUT:** input;  
 | **OUTPUT:** result;  
 | 
