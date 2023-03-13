@@ -24,7 +24,15 @@ To view the documentation of RgnTX, please type `browseVignettes("RgnTX")` after
 ### - shiftExonTx
 
 ```R
-shiftExonTx(exons.tx.B, start.B, distance)
+library(TxDb.Hsapiens.UCSC.hg19.knownGene)
+txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
+exons.tx0 <- exonsBy(txdb)
+#Shift regions over the following transcripts
+trans.ids <- c("170", "1387", "4113", "10715")
+regions <- exons.tx0[trans.ids]
+start <- c(3624255, 55158197, 881641, 15694195)
+width <- c(200, -200, 200, -200)
+shifted_regions <- shiftExonTx(regions, start, width)
 ```
 
 ```
