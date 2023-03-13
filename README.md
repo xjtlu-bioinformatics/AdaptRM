@@ -104,6 +104,9 @@ permTestTx_results <- permTestTx(RS1 = A,
                                  ev_function_1 = overlapCountsTx, 
                                  ev_function_2 = overlapCountsTx)
 ```
+
+### - plotPermResults
+
 ## 4. Shifted z-scores
 
 ### - shiftedZScoreTx
@@ -125,6 +128,8 @@ shitedZScoresTx_results <- shiftedZScoreTx(permTestTx_results,txdb,
                                            ev_function_1 = overlapCountsTxIA)
 
 ```
+
+### - plotShiftedZScoreTx
 
 ## 5. Multiple hypothesis tests with Benjamini-Hochberg correction
 
