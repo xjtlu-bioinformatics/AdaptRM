@@ -121,12 +121,12 @@ permTestTx_results <- permTestTxIA_customPick(RS1 = RS1,
                                               type = "mature",
                                               customPick_function = getStopCodon,
                                               ntimes = 1)
-shitedZScoresTx_results <- shiftedZScoreTx(permTestTx_results,txdb,
+shiftedZScoresTx_results <- shiftedZScoreTx(permTestTx_results,txdb,
                                            type = 'mature',
                                            window = 500,
                                            step = 50,
                                            ev_function_1 = overlapCountsTxIA)
-
+p1 <- plotShiftedZScoreTx(shiftedZScoresTx_results)
 ```
 
 ### - plotShiftedZScoreTx
