@@ -2,7 +2,7 @@
 
 ## 1. Install
 To install this package via devtools, please use the following codes.
-```
+```R
 if (!requireNamespace("devtools", quietly = TRUE))
     install.packages("devtools")
 
