@@ -22,21 +22,19 @@ To view the documentation of RgnTX, please type `browseVignettes("RgnTX")` after
 ## 2. Basic functions
 
 ### - shiftExonTx
+
 ```R
 shiftExonTx(exons.tx.B, start.B, distance)
 ```
 
-```latex
-| **INPUT:** input;  
-| **OUTPUT:** result;  
-| 
-| **IF** this_is_True:  
-|   do_this;  
-| **ELSE**
-|   select B from input;  
-|   do something whith input;  
-|   **FOR EACH** $a_i$ **in** B   
-|     do something with $a_i$;
+```
+ IF this_is_True 
+|   do_this  
+|   ELSE
+|   select B from input  
+|   do something whith input  
+|     FOR EACH  a_i in B   
+|     do something with a_i
 ```
 
 ### - randomizeTx
